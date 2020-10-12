@@ -45,7 +45,7 @@ function metaData(idNumber) {
 }
 
 function buildChart(idNumber) {
-  console.log(`chart selection: ${idNumber}`)
+  // console.log(`chart selection: ${idNumber}`)
 }
 
 
