@@ -80,7 +80,36 @@ function buildChart(idNumber) {
 
   Plotly.newPlot("bar", barData, barLayout);
 
+  // bubble chart
+  // otu id will be x values AND marker color
+  var bubbleOtuId = samples.otu_ids
+
+  // sample values will be the y values AND marker size
+  var bubbleSampleValues = samples.sample_values
+
+  // otu_labels will the text values
+  var bubbleOtuLabel = samples.otu_labels
+
+  // buble chart trace
+  var bubbleTrace = {
+    x: bubbleOtuId,
+    y: bubbleSampleValues,
+    mode: 'markers',
+    text: bubbleOtuLabel,
+    marker: {
+      color: bubbleOtuId,
+      size: bubbleSampleValues
+    }
+  };
+
+  var bubbleData = [bubbleTrace];
+
+  // the bubble comes from html
+  Plotly.newPlot('bubble', bubbleData);
+
+
   
+
 }
 
 
