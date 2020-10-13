@@ -104,8 +104,13 @@ function buildChart(idNumber) {
 
   var bubbleData = [bubbleTrace];
 
+  var bubbleLayout = {
+    title: "OTU ID",
+
+  };
+
   // the bubble comes from html
-  Plotly.newPlot('bubble', bubbleData);
+  Plotly.newPlot('bubble', bubbleData, bubbleLayout);
 
 
   
